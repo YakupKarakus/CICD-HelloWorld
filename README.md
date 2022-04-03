@@ -190,7 +190,7 @@ After this stage, our application is turned into a container and sent to [Docker
 
 - The infrastructure was created in the form of IaC using Terraform and was not included in the code as it was not suitable for the structure of the project.
 
-#### The containerized application can be run on Kubernetes either using Helm Chart or with deployment. Both options are available in the repository. You can make it meet your needs with a few changes.
+#### The containerized application can be run on Kubernetes either using Helm Chart or with deployment. Both options are available in the repository. You can make changes to the relevant section and use it according to your needs.
 
 - If the application will be run in Kubernetes as a deployment dont forget the expose your service:
 ```sh
