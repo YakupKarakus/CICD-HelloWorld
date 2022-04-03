@@ -1,0 +1,57 @@
+pipeline {
+
+    agent any
+
+    
+    environment { 
+        registry = "ulunmt/jenkins" 
+        registryCredential = 'ulunmt-dockerhub'
+        dockerImage = '' 
+    }
+    stages {
+        stage("Pull from Github") {
+            steps {
+                git 'https://github.com/mtulun/CICD-HelloWorld.git'
+            }
+        }
+        stage("Versions"){
+            steps {
+                echo "Java VERSION"
+                sh 'java -version'
+                echo "Maven VERSION"
+                sh 'mvn -version'
+            }
+        }
+        stage("SonarQube Analysis"){
+            steps {
+                withSonarQubeEnv(installationName: 'sonar1') {
+                    sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+                }
+            }
+        }
+        stage("Build project with Maven"){
+            steps {
+                echo 'Building project...'
+                sh "mvn compile"
+                sh "mvn package"
+                sh "mvn clean install"
+            }
+        }
+        stage('Building our image') { 
+            steps { 
+                script { 
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER" 
+                }
+            } 
+        }
+        stage('Deploy our image') { 
+            steps { 
+                script { 
+                    docker.withRegistry( '', registryCredential ) { 
+                        dockerImage.push() 
+                    }
+                } 
+            }
+        }
+    }
+}
