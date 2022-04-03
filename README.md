@@ -52,7 +52,7 @@ sudo systemctl start jenkins
 ```
 - Browse to http://<IP_ADDRESS>:8080 (or whichever port you configured for Jenkins when installing it) and wait until the Unlock Jenkins page appears.
 
-![](images/Unlock%10Jenkins.png)
+<img src="https://github.com/mtulun/images/blob/master/Unlock%20Jenkins.png">
 
 
 ## SonarQube Installation
