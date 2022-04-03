@@ -169,11 +169,11 @@ Username: admin     /       Password: admin
 > Administration > Security > Users
 > tabs on SonarQube UI.
 
-<SONARQUBE TOKEN CREATION RESIM>
+<img src="https://github.com/mtulun/images/blob/master/SonarQube%20Token%20Creation.png">
 
 Then, on Jenkins, the configurations for SonarQube are defined with the token we created.
 
-<SonarQube Jenkins Integration Resim>
+<img src="https://github.com/mtulun/images/blob/master/SonarQube%20Jenkins%20Integration.png">
 
 
 The plugins we need are installed via Jenkins Plugin Manager. Like Docker plugin, Git plugin, SonarQube Scanner for Jenkins, Maven Integration plugin.
@@ -183,7 +183,7 @@ The pipeline structure is configured to run on every change, depending on the re
 Our Pipeline goes to SonarQube code analysis after checking GitHub and the versions of the tools used.
 After this stage, our application is turned into a container and sent to [DockerHub].
 
-<PIPILINE STAGES RESIM>
+<img src="https://github.com/mtulun/images/blob/master/Pipeline%20Stages.png">
 
 - The infrastructure was created in the form of IaC using Terraform and was not included in the code as it was not suitable for the structure of the project.
 
@@ -193,7 +193,9 @@ After this stage, our application is turned into a container and sent to [Docker
 ```sh
 kubectl expose deploy hello-world --type=NodePort --port=80 --target-port=8085
 ```
+<img src="https://github.com/mtulun/images/blob/master/Pod.png">
 
+<img src="https://github.com/mtulun/images/blob/master/HelloWorld.png">
 
 | Contact | With me |
 | ------ | ------ |
