@@ -180,7 +180,7 @@ The plugins we need are installed via Jenkins Plugin Manager. Like Docker plugin
 In addition to plugins, tokens are created on DockerHub and added under Global Credentials to keep credential information more reliable.
 
 The pipeline structure is configured to run on every change, depending on the relevant branch in the GitHub repository via Jenkinsfile.
-Our Pipeline goes to SonarQube code analysis after checking GitHub and the versions of the tools used.
+Our Pipeline goes to SonarQube code analysis after checking [GitHub] and the versions of the tools used.
 After this stage, our application is turned into a container and sent to [DockerHub].
 
 <img src="https://github.com/mtulun/images/blob/master/Pipeline%20Stages.png">
@@ -197,7 +197,7 @@ kubectl expose deploy hello-world --type=NodePort --port=80 --target-port=8085
 
 <img src="https://github.com/mtulun/images/blob/master/HelloWorld.png">
 
-| Contact With me |
+| Contact | With me |
 | ------ | ------ |
 | LinkedIn | [https://www.linkedin.com/in/mtulun/][PlDb] |
 | GitHub | [https://github.com/mtulun][PlGh] |
@@ -210,19 +210,10 @@ kubectl expose deploy hello-world --type=NodePort --port=80 --target-port=8085
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
+
    [DockerHub]: <https://hub.docker.com>
    [df1]: https://pkg.jenkins.io/debian-stable/
-   [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
-   [express]: <http://expressjs.com>
-   [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
+   [GitHub]: <https://github.com/mtulun/CICD-HelloWorld>
 
    [PlDb]: <https://www.linkedin.com/in/mtulun/>
    [PlGh]: <https://github.com/mtulun>
