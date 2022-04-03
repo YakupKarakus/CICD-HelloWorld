@@ -197,7 +197,7 @@ kubectl expose deploy hello-world --type=NodePort --port=80 --target-port=8085
 
 <img src="https://github.com/mtulun/images/blob/master/HelloWorld.png">
 
-| Contact | With me |
+| Contact | Social Links |
 | ------ | ------ |
 | LinkedIn | [https://www.linkedin.com/in/mtulun/][PlDb] |
 | GitHub | [https://github.com/mtulun][PlGh] |
