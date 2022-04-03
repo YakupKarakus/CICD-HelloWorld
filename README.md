@@ -2,6 +2,9 @@
 ## CI/CD process developed using Jenkins, SonarQube, and Kubernetes.
 
 
+<img src="https://github.com/mtulun/images/blob/master/FlowScheme.png">
+
+
 I will cover the CI/CD process of a simple Java application built using SpringBoot,Maven.
 In this process, we will see that the code is artifacted and built with Maven, and the code is scanned on SonarQube.
 
