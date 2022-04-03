@@ -1,9 +1,6 @@
 # Hello World CI/CD Sample
 ## CI/CD process developed using Jenkins, SonarQube, and Kubernetes.
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 I will cover the CI/CD process of a simple Java application built using SpringBoot,Maven.
 In this process, we will see that the code is artifacted and built with Maven, and the code is scanned on SonarQube.
